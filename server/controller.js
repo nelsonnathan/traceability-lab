@@ -1,3 +1,6 @@
+const Rollbar = require("rollbar")
+const path = require('path')
+
 let newKanyeQuote = () => {
     return "'I leave my emojis bart Simpson color' - Kanye West"
 }
@@ -9,6 +12,12 @@ let oldKanyeQuote = () => {
 let kanyeNow = () => {
     return "'You cray? We cray too! You pray? We pray too!' - Kanye West"
 }
+
+const rollbar = new Rollbar({
+    accessToken: 'ad24f23a14f145bf905d2defe4ca66b6',
+    captureUncaught: true,
+    captureUnhandledRejections: true
+  });
 
 module.exports = {
     newKanye: (req, res) => {
