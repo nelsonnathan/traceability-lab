@@ -13,14 +13,10 @@ const app = express()
 app.use(express())
 
 
-app.get('/', (req, res) => {
-    rollbar.log("Hello world!");
+app.get('/kanye', (req, res) => {
+    rollbar.log(kanye());
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
-app.get('/kanye', (req, res) => {
-    rollbar.log(hiKanye())
-    res.sendFile(path.join(__dirname, '../public/index.html'))
-})
 
 app.listen(port, () => console.log(`Oh no! Server ${port} is getting away!`))
