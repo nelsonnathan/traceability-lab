@@ -27,5 +27,23 @@ app.get('/kanye', (req, res) => {
     }
 })
 
+app.get('/oldkanye', (req, res) => {
+    try {
+        oldKanye(1,2)
+    } catch (criticalError) {
+        console.log(criticalError)
+        rollbar.criticalError
+    }
+})
+
+app.get('/newKanye', (req, res) => {
+    try {
+        newKanye(1,2)
+    } catch (warning) {
+        console.log(warning)
+        rollbar.warning
+    }
+})
+
 
 app.listen(port, () => console.log(`Oh no! Server ${port} is getting away!`))
