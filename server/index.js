@@ -18,7 +18,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/kanye', (req, res) => {
-    rollbar.log(kanye())
+    kanye()
+    rollbar.log('kanye')
     res.sendFile(path.join(__dirname, '../public/html.index'))
 })
 
