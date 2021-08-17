@@ -36,7 +36,7 @@ app.get('/oldkanye', (req, res) => {
     }
 })
 
-app.get('/newKanye', (req, res) => {
+app.get('/newkanye', (req, res) => {
     try {
         newKanye(1,2)
     } catch (warning) {
