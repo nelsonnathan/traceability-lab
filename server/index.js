@@ -18,4 +18,9 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
+app.get('/kanye', (req, res) => {
+    hiKanye()
+    res.sendFile(path.join(__dirname, '../public/index.html'))
+})
+
 app.listen(port, () => console.log(`Oh no! Server ${port} is getting away!`))
