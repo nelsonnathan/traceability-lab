@@ -14,6 +14,7 @@ app.use(express())
 
 
 app.get('/', (req, res) => {
+    rollbar.log('Hello World!')
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
