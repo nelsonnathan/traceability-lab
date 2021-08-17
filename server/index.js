@@ -3,7 +3,7 @@ const path = require('path')
 const port = process.env.PORT || 4545
 
 const app = express()
-
+app.use(express())
 
 
 app.get('/', (req, res) => {
