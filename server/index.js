@@ -32,7 +32,7 @@ app.get('/oldkanye', (req, res) => {
         oldKanye(1,2)
     } catch (criticalError) {
         console.log(criticalError)
-        rollbar.criticalError(criticalError)
+        rollbar.critical(criticalError)
     }
 })
 
