@@ -32,7 +32,7 @@ app.get('/oldkanye', (req, res) => {
         oldKanye(1,2)
     } catch (criticalError) {
         console.log(criticalError)
-        rollbar.criticalError
+        rollbar.criticalError(criticalError)
     }
 })
 
@@ -41,7 +41,7 @@ app.get('/newKanye', (req, res) => {
         newKanye(1,2)
     } catch (warning) {
         console.log(warning)
-        rollbar.warning
+        rollbar.warning(warning)
     }
 })
 
