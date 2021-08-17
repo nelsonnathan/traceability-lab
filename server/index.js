@@ -13,9 +13,13 @@ const app = express()
 app.use(express())
 
 
-app.get('/kanye', (req, res) => {
-    rollbar.log(kanye());
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'))
+})
+
+app.get('/kanye', (req, res) => {
+    rollbar.log(kanye())
+    res.sendFile(path.join(__dirname, '../public/html.index'))
 })
 
 
