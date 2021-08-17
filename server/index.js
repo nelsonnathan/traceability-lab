@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/kanye', (req, res) => {
-    hiKanye()
+    rollbar.log(hiKanye())
     res.sendFile(path.join(__dirname, '../public/index.html'))
 })
 
