@@ -19,9 +19,12 @@ app.get('/', (req, res) => {
 })
 
 app.get('/kanye', (req, res) => {
-    kanye(1,2)
-    rollbar.log('kanye')
-    res.sendFile(path.join(__dirname, '../public/kanye.html'))
+    try {
+        kanye(1,2) 
+    } catch (error){
+        console.log(error)
+        rollbar.error(error)
+    }
 })
 
 
